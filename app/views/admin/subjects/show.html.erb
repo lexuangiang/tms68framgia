@@ -1,0 +1,79 @@
+<%= provide :title, t(".title") %>
+<section id="subject-show" class="admin-show-section">
+  <div class="container">
+    <div class="row">
+      <div class="header">
+        <div class="row subject-header">
+          <div class="subject-action">
+            <ul class="list-inline pull-right margin-15">
+              <li>
+                <%= link_to edit_admin_subject_path(@subject),
+                  class: "btn btn-success" do %>
+                  <span class="glyphicon glyphicon-edit"></span>
+                  <%= t ".edit" %>
+                <% end %>
+              </li>
+              <li>
+                <% if @subject.courses.any? %>
+                  <%= link_to [:admin, @subject], method: :delete,
+                    data: {confirm: t(".confirm_delete_association")},
+                    class: "btn btn-danger" do %>
+                    <span class="glyphicon glyphicon-trash"></span>
+                    <%= t ".delete" %>
+                  <% end %>
+                <% else %>
+                  <%= link_to [:admin, @subject], method: :delete,
+                    data: {confirm: t(".confirm_delete")},
+                    class: "btn btn-danger" do %>
+                    <span class="glyphicon glyphicon-trash"></span>
+                    <%= t ".delete" %>
+                  <% end %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-1 col-xs-2 subject-image">
+            <%= image_tag @subject.image_url.url,
+              class: "img-subject img-circle" %>
+          </div>
+          <div class="col-md-6 col-xs-8 margin-15">
+            <h1><%= @subject.name %></h1>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="subject-show">
+        <div class="box-divider">
+          <div class="label-title">
+            <%= t ".description" %>
+          </div>
+          <p><%= @subject.description %></p>
+        </div>
+      </div>
+      <div class="render-task">
+        <div class="subject-task">
+          <div class="overview">
+            <%= t ".list_tasks" %>
+          </div>
+          <div class="note-list user-task-list">
+            <% @tasks.each do |task| %>
+              <div class="note row">
+                <div class="col-md-1 td-image col-xs-1">
+                  <%= image_tag "task.png", class: "img-task" %>
+                </div>
+                <div class="col-md-10 col-xs-10">
+                  <div class="task-name">
+                    <%= task.name %>
+                  </div>
+                  <div class="task-description">
+                    <p><%= task.description %></p>
+                  </div>
+                </div>
+              </div><hr>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

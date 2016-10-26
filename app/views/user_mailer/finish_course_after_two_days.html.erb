@@ -1,0 +1,6 @@
+<h1><%= t "mail.welcome", name: @course.user.name %></h1>
+<%= t "mail.before_course_finish", name: @course.name %>
+<div class="panel panel-default text-center">
+  <h4><%= t "mail.course_description", description: @course.description %></h4>
+  <%= t "mail.course_status", status: @course.status %>
+</div>

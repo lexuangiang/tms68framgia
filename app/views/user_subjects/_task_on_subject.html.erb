@@ -1,0 +1,53 @@
+<div class="col-md-12 top-20 padding-0">
+  <div class="col-md-12">
+    <div class="panel">
+      <div class="panel-heading">
+        <h3><%= t "task.title_show_subject" %></h3>
+      </div>
+      <%= form_for @user_subject, url: user_course_user_subject_path(@user_course,
+        @user_subject), method: :put do |f| %>
+        <%= f.hidden_field :id %>
+        <div class="panel-body">
+          <div class="col-md-8">
+            <ul class="timeline timeline-custom">
+              <%= f.fields_for :user_tasks do |builder| %>
+                <li class="timeline-inverted">
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4 class="timeline-title">
+                        <div class="timeline-body">
+                          <% if builder.object.new_record? %>
+                            <%= builder.hidden_field :user_id, value: @user_id %>
+                            <%= builder.check_box :task_id, {checked: false},
+                              builder.object.task.id, nil %>
+                            <h4><%= builder.object.task.name %></h4>
+                          <% else %>
+                            <%= builder.hidden_field :user_id %>
+                            <%= builder.check_box :task_id, {checked: true, disabled: true} %>
+                            <h4><%= builder.object.task.name %></h4>
+                          <% end %>
+                        </div>
+                      </h4>
+                    </div>
+                  </div>
+                </li>
+              <% end %>
+              <div class="text-center">
+                <% if @user_subject.finished? %>
+                  <h3>
+                    <span class="label label-success">
+                      All Task Finish
+                    </span>
+                  </h3>
+                <% else %>
+                  <%= f.submit "Finish",
+                    class: "btn btn-primary" if @user_subject.user == current_user %>
+                <% end %>
+              </div>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

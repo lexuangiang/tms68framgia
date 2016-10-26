@@ -1,0 +1,29 @@
+<section id="service" class = "user-section">
+  <div id="mimin" class="dashboard topnav">
+    <div class="row">
+      <div class="col-md-12 top-20">
+        <div class="col-md-12">
+          <div class="panel">
+            <div class="panel-body">
+              <div class="col-md-12">
+                <h3 class="animated fadeInLeft"><%= @course.name %></h3>
+                <p class="animated fadeInDown">
+                  <%= @course.description %>
+                </p>
+                <p class="animated fadeInLeft">
+                  <%= @course.start_date %>
+                  <span id="status"
+                    class="label label-outline label-<%= show_status_course @course %>">
+                    <%= @course.status %>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <%= render partial: "subjects_on_course",
+            locals: {subjects: @subjects, course: @course} %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

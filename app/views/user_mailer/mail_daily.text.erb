@@ -1,0 +1,13 @@
+<%= t "mail.welcome", name: @supervisor.name %>
+<%= t "mail.blank" %>
+<% if @user_tasks.any? %>
+  <% @user_tasks.each do |user_task| %>
+    <%= t "mail.trainee", name: user_task.user.name %>
+    <%= t "mail.has_update", task: user_task.task.name %>
+    <%= t "mail.on_subject", name: user_task.user_subject.subject.name %>
+    <%= t "mail.in_course",
+      name: user_task.user_subject.user_course.course.name %>
+  <% end %>
+<% else %>
+  <%= t "mail.not_report" %>
+<% end %>

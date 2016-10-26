@@ -1,0 +1,24 @@
+<div class="nav-tabs-custom">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#inprogress" aria-controls="inprogress" role="tab" data-toggle="tab"><%= t "info.inprogress" %></a>
+    </li>
+    <li role="presentation">
+      <a href="#finished" aria-controls="finished" role="tab" data-toggle="tab"><%= t "info.finished" %>s</a>
+    </li>
+    <li role="presentation">
+      <a href="#activities" aria-controls="activities" role="tab" data-toggle="tab"><%= t "info.activities" %></a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="inprogress">
+      <%= render "inprogress_course_info" %>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="finished">
+      <%= render "finished_course_info" %>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="activities">
+      <%= render "activities_info" %>
+    </div>
+  </div>
+</div>

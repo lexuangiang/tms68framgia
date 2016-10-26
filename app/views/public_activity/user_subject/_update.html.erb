@@ -1,0 +1,17 @@
+<div class="activity-task">
+  <span>
+    <% if activity.trackable %>
+      <%= t "subject.subject" %>
+      <%= activity.owner.name %>
+      <%= t "task.action_finish" %>
+      <%= activity.trackable.subject.name %>
+
+    <% else %>
+      <p>"hahah"</p>
+    <% end %>
+  </span>
+  <span class="time-ago pull-right">
+    <%= time_ago_in_words activity.created_at %>
+    <%= t "task.time_ago" %>
+  </span>
+</div>

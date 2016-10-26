@@ -1,0 +1,37 @@
+<tr>
+  <td class="text-center">
+    <%= link_to subject.name, admin_subject_path(subject) %>
+  </td>
+  <td class="text-center"><%= subject.description %></td>
+  <td class="text-center">
+    <%= l subject.created_at, format: :date_user_create %>
+  </td>
+  <td class="text-center">
+    <%= link_to admin_subject_path(subject), class: "text-success" do %>
+      <span class="glyphicon glyphicon-search"></span>
+      <%= t ".view" %>
+    <% end %>
+  </td>
+  <td class="text-center">
+    <%= link_to edit_admin_subject_path(subject) do %>
+      <span class="glyphicon glyphicon-edit"></span>
+      <%= t ".edit" %>
+    <% end %>
+  </td>
+  <td class="text-center">
+    <% if subject.courses.any? %>
+      <%= link_to admin_subject_path(subject), method: :delete,
+        data: {confirm: t(".confirm_delete_association")},
+        class: "text-danger" do %>
+        <span class="glyphicon glyphicon-trash"></span>
+        <%= t ".delete" %>
+      <% end %>
+    <% else %>
+      <%= link_to admin_subject_path(subject), method: :delete,
+        data: {confirm: t(".confirm_delete")}, class: "text-danger" do %>
+        <span class="glyphicon glyphicon-trash"></span>
+        <%= t ".delete" %>
+      <% end %>
+    <% end %>
+  </td>
+</tr>

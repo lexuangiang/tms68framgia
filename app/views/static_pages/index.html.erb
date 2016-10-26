@@ -1,0 +1,130 @@
+<section id="home">
+  <div id="home-carousel" class="carousel slide" data-interval="false">
+    <ol class="carousel-indicators">
+      <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#home-carousel" data-slide-to="1"></li>
+      <li data-target="#home-carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="carousel-caption">
+          <div class="animated bounceInRight">
+            <h2><%= t ".hello" %> <br><%= t ".slide_title" %></h2>
+            <p><%= t ".slide_content" %></p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="carousel-caption">
+          <div class="animated bounceInDown">
+            <h2><%= t ".hello" %> <br><%= t ".slide_title" %></h2>
+            <p><%= t ".slide_content" %></p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="carousel-caption">
+          <div class="animated bounceInUp">
+            <h2><%= t ".hello" %> <br><%= t ".slide_title" %></h2>
+            <p><%= t ".slide_content" %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav id="nav-arrows" class="nav-arrows hidden-xs
+      hidden-sm visible-md visible-lg">
+      <%= link_to "#home-carousel", data: {slide: "prev"},
+        class: "sl-prev hidden-xs" do %>
+        <i class="fa fa-angle-left fa-3x"></i>
+      <% end %>
+      <%= link_to "#home-carousel", data: {slide: "next"},
+        class: "sl-next hidden-xs" do %>
+        <i class="fa fa-angle-right fa-3x"></i>
+      <% end %>
+    </nav>
+  </div>
+</section>
+<section id="service">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title text-center wow fadeInDown">
+          <h2><%= t ".training_principles" %></h2>
+          <p><%= t ".principles_description" %></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12 wow fadeInLeft">
+        <div class="media">
+          <a href="#" class="pull-left">
+            <%= image_tag "tutorial.png", class: "media-object" %>
+          </a>
+          <div class="media-body">
+            <h3><%= t".real_tutorials" %></h3>
+            <p><%= t ".real_tutorials_description" %></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="0.2s">
+        <div class="media">
+          <a href="#" class="pull-left">
+            <%= image_tag "projects.png", class: "media-object" %>
+          </a>
+          <div class="media-body">
+            <h3><%= t ".projects" %></h3>
+            <p><%= t ".projects_description" %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="count">
+  <div class="container">
+    <div class="row">
+      <div class="counter-section clearfix">
+        <div class="col-md-4 col-sm-4 col-xs-12 wow fadeInLeft" data-wow-delay="0.5s">
+          <div class="fact-item text-center">
+            <div class="fact-icon">
+              <i class="fa fa-check-square fa-lg"></i>
+            </div>
+            <span><%= t ".count_number" %></span>
+            <p><%= t ".completed_courses" %></p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 wow fadeInLeft" data-wow-delay="0.8s">
+          <div class="fact-item text-center">
+            <div class="fact-icon">
+              <i class="fa fa-mortar-board fa-lg"></i>
+            </div>
+            <span><%= t ".count_number" %></span>
+            <p><%= t ".trainees" %></p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 wow fadeInLeft" data-wow-delay="1.1s">
+          <div class="fact-item text-center last">
+            <div class="fact-icon">
+              <i class="fa fa-users fa-lg"></i>
+            </div>
+            <span><%= t ".count_number" %></span>
+            <p><%= t ".trainers" %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="section-title section-title-custom text-center wow fadeInUp">
+        <h2><%= t ".about" %></h2>
+        <p><%= t ".about_description" %></p>
+      </div>
+      <div class="about-us text-center wow fadeInDown">
+        <%= image_tag "framgia_logo.jpg", class: "img-responsive" %>
+      </div>
+    </div>
+  </div>
+</section>

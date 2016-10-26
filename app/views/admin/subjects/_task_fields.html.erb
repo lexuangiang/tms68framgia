@@ -1,0 +1,18 @@
+<div class="form-group choice_subject">
+  <%= f.label :task %>
+  <div class="col-md-12">
+    <div class=" row col-md-10 form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control",
+        placeholder: t(".task_name_placeholder") %>
+    </div>
+    <div class="row col-md-10 form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form-control",
+        placeholder: t(".task_description_placeholder") %>
+    </div>
+    <div class="row col-md-8 margin-bottom-fix">
+      <%= link_to_remove_fields t(".remove"), f %>
+    </div>
+  </div>
+</div>

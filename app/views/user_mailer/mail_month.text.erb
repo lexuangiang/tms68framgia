@@ -1,0 +1,13 @@
+<%= t "mail.welcome", name: @supervisor.name %>
+<%= t "mail.blank" %>
+<%= t "mail.course", name: @course.name %>
+<%= t "mail.status", status: @course.status %>
+<% @course.user_courses.each do |user_course| %>
+  <%= t "mail.user", name: user_course.user.name %>
+  <%= t "mail.subjects" %>
+<% user_course.user_subjects.each do |user_subject| %>
+    <%= t "mail.subject", name: user_subject.subject.name %>
+    <%= t "mail.content", name: user_subject.subject.name %>
+    <%= t "mail.status", status: user_subject.status %>
+  <% end %>
+<% end %>

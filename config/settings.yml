@@ -1,0 +1,20 @@
+course_pending: "pending"
+course_started: "started"
+task_quanlity: 1
+params_all: "all"
+params_pending: "pending"
+params_started: "started"
+params_finished: "finished"
+status_pending: "pending"
+status_started: "started"
+pagination:
+  per_page: 15
+  per_page_member: 5
+message_success: "success"
+message_notice: "notice"
+message_alert: "alert"
+message_danger: "danger"
+course_subject_quanlity: 1
+is_active_true: true
+mail_from: "project2tms@gmail.com"
+layout: "mailer"

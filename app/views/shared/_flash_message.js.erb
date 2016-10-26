@@ -1,0 +1,24 @@
+<% flash.each do |key, value| %>
+  <% case key %>
+  <% when Settings.message_notice %>
+    <script>
+      $.growl.notice({title: "", message: "<%= value %>"});
+    </script>
+  <% when Settings.message_success %>
+    <script>
+      $.growl.notice({title: "", message: "<%= value %>"});
+    </script>
+  <% when Settings.message_alert %>
+    <script>
+      $.growl.error({title: "", message: "<%= value %>"});
+    </script>
+  <% when Settings.message_danger %>
+    <script>
+      $.growl.error({title: "", message: "<%= value %>"});
+    </script>
+  <% else %>
+    <script>
+      $.growl.warning({title: "", message: "<%= value %>"});
+    </script>
+  <% end %>
+<% end %>

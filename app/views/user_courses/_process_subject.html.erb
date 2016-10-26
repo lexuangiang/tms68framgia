@@ -1,0 +1,18 @@
+<ul class="timeline timeline-custom">
+  <li class="timeline-inverted">
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4 class="timeline-title"></h4>
+        <div class="timeline-body">
+          <% CourseSubject.statuses.each do |key,value| %>
+            <% count = count_status_subject @course_subject, key %>
+            <% subject = name_subject key %>
+            <p class="btn btn-<%= type_status key %> btn-circle" >
+              <p><%= subject %> <%= count %>/<%= @count_all_subject %></p>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

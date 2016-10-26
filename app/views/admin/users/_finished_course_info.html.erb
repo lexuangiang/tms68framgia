@@ -1,0 +1,36 @@
+<div class="tab-content">
+  <% if @course_finish.any? %>
+    <% @course_finish.each do |user_course| %>
+      <li class="list-group-item finished_course">
+        <dl class="dl-horizontal">
+          <dt><strong>Name</strong></dt>
+          <dd>
+            <%= link_to user_course.course.name,
+              user_course_path(user_course) %>
+          </dd>
+          <dt><strong>Description:</strong></dt>
+          <dd><%= user_course.course.description %></dd>
+          <dt><strong>Status:</strong></dt>
+          <dd><%= user_course.course.status %></dd>
+          <dt><strong>Start date:</strong></dt>
+          <dd>
+            <span class="text-muted">
+               <%= l user_course.course.start_date, format: :default %>
+            </span>
+          </dd>
+          </dd>
+          <dt><strong>End date:</strong></dt>
+          <dd>
+            <span class="text-muted">
+               <%= l user_course.course.end_date, format: :default %>
+            </span>
+          </dd>
+        </dl>
+      </li>
+    <% end %>
+  <% else %>
+    <ul class="timelines timeline-inverse">
+      <p class="text text-danger">You have not finished any course</p>
+    </ul>
+  <% end %>
+</div>

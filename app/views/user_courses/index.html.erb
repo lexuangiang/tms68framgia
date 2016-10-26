@@ -1,0 +1,61 @@
+<section id="count" class = "login-section">
+  <div class = "container">
+    <div class = "row custom-row">
+      <div class = "col-md-12">
+        <div class="well well-sm">
+          <strong>
+            <%= t "course.title_show_course"%>
+          </strong>
+          <div class="btn-group">
+            <%= link_to t("course.link_all"),
+              user_courses_path(type: Settings.params_all),
+              class: "btn btn-primary button" %>
+            <%= link_to t("course.link_new"),
+              user_courses_path(type: Settings.params_pending),
+              class: "btn btn-primary button" %>
+            <%= link_to t("course.link_started"),
+              user_courses_path(type: Settings.params_started),
+              class: "btn btn-primary button" %>
+            <%= link_to t("course.link_finished"),
+              user_courses_path(type: Settings.params_finished),
+              class: "btn btn-primary button" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "row custom-row">
+      <div class = "col-md-12">
+        <% @user_courses.each do |user_course|%>
+          <div class = "col-md-4 custom-course">
+            <div class="panel box-v7">
+              <div class="panel-body">
+                <div class="col-md-12 padding-0 box-v7-header">
+                  <div class="col-md-12 padding-0">
+                    <div class="col-md-10 padding-0">
+                      <%= image_tag "avatar.png", class: "box-v7-avatar pull-left" %>
+                      <h4>
+                        <%= link_to user_course.course.name, user_course_path(user_course) %>
+                      </h4>
+                      <p>
+                        <%= l user_course.course.start_date, format: :short %>
+                        <span id="status"
+                          class="label label-outline label-<%= show_status_course get_course_status user_course %>">
+                          <%= user_course.course.status %>
+                      </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 padding-0 box-v7-body">
+                  <p class = "course_description">
+                    <%= user_course.course.description %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

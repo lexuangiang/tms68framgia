@@ -1,0 +1,33 @@
+<tr>
+  <td class="text-center"><%= link_to user.name, admin_user_path(user) %></td>
+  <td class="text-center"><%= user.email %></td>
+  <td class="text-center">
+    <span class="label label-outline label-<%= show_role user %>">
+      <%= user.role %>
+    </span>
+  </td>
+  <td class="text-center">
+    <%= l user.created_at, format: :date_user_create %>
+  </td>
+  <td class="text-center">
+    <%= link_to admin_user_path(user), class: "text-success" do %>
+      <span class="glyphicon glyphicon-search"></span>
+      <%= t ".view" %>
+    <% end %>
+  </td>
+  <td class="text-center">
+    <%= link_to edit_admin_user_path(user) do %>
+      <span class="glyphicon glyphicon-edit"></span>
+      <%= t ".edit" %>
+    <% end %>
+  </td>
+  <td class="text-center">
+    <% unless current_user == user || user.admin? %>
+      <%= link_to admin_user_path(user), method: :delete,
+        data: {confirm: t(".confirm_delete")}, class: "text-danger" do %>
+        <span class="glyphicon glyphicon-trash"></span>
+        <%= t ".delete" %>
+      <% end %>
+    <% end %>
+  </td>
+</tr>

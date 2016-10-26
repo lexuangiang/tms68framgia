@@ -1,0 +1,40 @@
+<%= provide :title, t(".title") %>
+<section id="service" class="admin-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 padding-0 margin-bottom-20">
+        <h3 class="animated fadeInLeft"><%= t ".all_users" %></h3>
+      </div>
+      <div class = "row margin-bot-20">
+        <div class="form-group">
+          <div class="col-md-4">
+            <%= link_to new_admin_user_path, class: "btn btn-info" do %>
+              <%= t ".btn_create" %>
+              <i class="fa fa-user-plus custom"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-table">
+        <table id="table_list" class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th class="text-center"><%= t ".name" %></th>
+              <th class="text-center"><%= t ".email" %></th>
+              <th class="text-center"><%= t ".role" %></th>
+              <th class="text-center"><%= t ".create_at" %></th>
+              <th class="text-center"><%= t ".view" %></th>
+              <th class="text-center"><%= t ".edit" %></th>
+              <th class="text-center"><%= t ".delete" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render @users %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+

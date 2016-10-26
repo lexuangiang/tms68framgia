@@ -1,0 +1,51 @@
+<%= provide :title, @user.name %>
+<section id="admin-service" class="admin-show-section">
+  <div class="container">
+    <div class="row">
+      <div class="row admin-profile">
+        <section class="content">
+          <div class="row before">
+            <div class="col-md-3">
+              <div class="box box-primary">
+                <div class="box-body box-profile before">
+                  <%= image_tag @user.avatar_url.url,
+                    class: "img-circle profile-user-img img-responsive
+                      img-circle" %>
+                  <h3 class="profile-username text-center"><%= @user.name %></h3>
+                  <div class="text-muted padding-10">
+                    <p class="padding-10">
+                      <b><%= t ".email" %></b>
+                      <%= @user.email %>
+                    </p>
+                    <p class="padding-10">
+                      <b><%= t ".role" %></b>
+                      <span class="label label-outline label-<%= show_role @user %>">
+                        <%= @user.role %>
+                      </span>
+                    </p>
+                    <hr>
+                    <div class="text-center">
+                      <%= link_to edit_admin_user_path(@user) do %>
+                        <span class="glyphicon glyphicon-edit"></span>
+                      <% end %>
+                      <% unless current_user == @user || @user.admin? %>
+                        <%= link_to admin_user_path(@user), method: :delete,
+                          data: {confirm: t(".confirm_delete")},
+                          class: "text-danger padding-left-10" do %>
+                          <span class="glyphicon glyphicon-trash"></span>
+                        <% end %>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <%= render "tab_info_user" %>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>

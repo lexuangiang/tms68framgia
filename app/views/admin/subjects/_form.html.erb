@@ -1,0 +1,38 @@
+<%= form_for [:admin, @subject] do |f| %>
+  <div class="col-md-12 form-group">
+    <div class="row col-md-10 form-group">
+      <h2 class="title"><%= t ".title" %></h2>
+    </div>
+    <div class="row col-md-10 form-group">
+      <%= render "shared/error_messages", object: f.object %>
+    </div>
+    <div class="row col-md-10 form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control",
+        placeholder: t(".subject_description_placeholder") %>
+    </div>
+    <div class="row col-md-10 form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form-control",
+        placeholder: t(".subject_description_placeholder") %>
+    </div>
+    <div class="row col-md-10 form-group">
+      <%= f.label :image %>
+      <%= f.file_field :image_url %>
+    </div>
+  </div>
+  <div id ="tasks_field" class="col-md-12">
+    <%= f.fields_for :tasks do |task| %>
+      <%= render "task_fields", f: task %>
+    <% end %>
+    <div class="add_fields" id="add_task">
+      <%= link_to_add_fields t(".add_task"), f, :tasks %>
+    </div>
+  </div>
+  <div class="col-md-12 form-group">
+    <div class="margin-top-fix row col-md-10">
+      <%= f.submit yield(:submit_button),
+        class: "btn btn-primary btn-block btn-signin" %>
+    </div>
+  </div>
+<% end %>

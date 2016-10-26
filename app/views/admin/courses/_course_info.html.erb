@@ -1,0 +1,21 @@
+<h4><%= @course.name %></h4>
+<p><%= @course.description %></p>
+<p>
+  <strong><%= t ".user_create" %></strong>
+  <%= @course.user.name %>
+</p>
+<p>
+  <strong><%= t ".start_at" %></strong>
+  <%= @course.start_date %>
+</p>
+<p>
+  <strong><%= t ".end_at" %></strong>
+  <%= @course.end_date %>
+</p>
+<p>
+  <strong><%= t ".status" %></strong>
+  <span id = "course-status">
+  <span class="label label-outline label-<%= show_status @course %>">
+    <%= @course.status %>
+  </span>
+</p>

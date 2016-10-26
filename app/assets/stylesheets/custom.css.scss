@@ -1,0 +1,304 @@
+.alert {
+  color: #d9534f;
+  font-size: 15px;
+  font-weight: bold;
+}
+.margin-top-fix {
+  margin-top: 20px;
+}
+.margin-bottom-fix {
+  margin-bottom: 20px;
+}
+.nav-name {
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+.title-name {
+  font-size: 35px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0 0;
+  min-height: 12px;
+}
+.title-form {
+  font-size: 35px;
+  color: rgb(104, 145, 162);
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+  min-height: 12px;
+}
+.login-section {
+  background: image-url('bg3.png') !important;
+  padding-top: 190px;
+}
+.card-container.card {
+  max-width: 350px;
+  padding: 40px 40px;
+}
+
+.btn {
+  font-weight: 700;
+  height: 36px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.card {
+  background-image: linear-gradient(transparent, rgb(51, 102, 153), transparent);
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.profile-name-card {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0 0;
+  min-height: 1em;
+}
+
+.reauth-email {
+  display: block;
+  color: #404040;
+  line-height: 2;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+  direction: ltr;
+  height: 44px;
+  font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+  border-color: rgb(104, 145, 162);
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+  background-color: rgb(104, 145, 162);
+  padding: 0px;
+  font-weight: 700;
+  font-size: 14px;
+  height: 36px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  -o-transition: all 0.218s;
+  -moz-transition: all 0.218s;
+  -webkit-transition: all 0.218s;
+  transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+  background-color: rgb(140, 179, 217);
+}
+
+.forgot-password {
+  color: rgb(104, 145, 162);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+  color: rgb(140, 179, 217);
+}
+
+#status {
+  margin-left: 10px;
+}
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.admin-show-section {
+  background: #F6F8F8;
+  padding-top: 155px;
+  font-size: 100%;
+}
+
+#subject-show .box-divider {
+  padding: 10px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+#subject-show .box-divider .label-title {
+  color: #257C94;
+  font-size: 150%;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.box-divider > p {
+  margin: 0 0 10px;
+}
+.subject-task {
+  background-color: white;
+  padding: 10px;
+}
+#subject-show .subject-task .overview {
+  font-size: 120%;
+  color: #5cb85c;
+  margin-bottom: 15px;
+  letter-spacing: 0.05px;
+  font-weight: 600;
+}
+#subject-show .subject-task-list .td-image {
+  width: 50px;
+  height: 85px;
+}
+.img-task {
+  width: 40px;
+  height: 40px;
+}
+#subject-show .subject-task .task-name {
+  font-size: 125%;
+}
+#subject-show .subject-task .task-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.task-description > p {
+  margin: 10px 0;
+}
+#subject-show .subject-image {
+  padding-left: 5px;
+  padding-right: 0px;
+}
+.img-subject {
+  width: 70px;
+  height: 70px;
+  border: 3px solid #d2d6de;
+}
+.img-circle {
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.margin-15 {
+  margin: 15px 0;
+}
+.subject-header {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.timeline {
+    position: relative;
+    margin: 0 0 30px 0;
+    padding-left: 20;
+    list-style: none;
+}
+.timeline>li {
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.timeline>li>.fa, .timeline>li>.glyphicon, .timeline>li>.ion {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    line-height: 30px;
+    position: absolute;
+    color: #666;
+    background: #d2d6de;
+    border-radius: 50%;
+    text-align: center;
+    left: 18px;
+    top: 0;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.init-background-color {
+    background-color: GREEN !important;
+}
+.timeline-inverse>li>.timeline-item {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.timeline>li>.timeline-item {
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    margin-top: 0;
+    background: #fff;
+    color: #444;
+    margin-left: 60px;
+    margin-right: 15px;
+    padding: 0;
+    position: relative;
+}
+.timeline-inverse>li>.timeline-item>.timeline-header {
+    border-bottom-color: #ddd;
+}
+.timeline>li>.timeline-item>.timeline-header {
+    margin: 0;
+    color: #555;
+    border-bottom: 1px solid #f4f4f4;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 1.1;
+}
+.timeline-header {
+    font-size: 16px;
+    font-weight: bold;
+}

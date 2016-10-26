@@ -1,0 +1,313 @@
+.label-primary {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+  border: 1px solid #1c84c6 !important;
+  color: #1c84c6 !important;
+}
+.label-success {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+  border: 1px solid #27c24c !important;
+  color: #27c24c !important;
+}
+.label-primary {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+  border: 1px solid #73caef !important;
+  color: #73caef !important;
+}
+.label-outline:hover {
+  background: none !important;
+  color: #918C8C !important;
+  border: 1px solid #918C8C !important;
+}
+ul.tag-in {
+  padding: 0px;
+  margin: 0px;
+  li {
+  display: inline-block;
+    a {
+      color: #000;
+      font-size: 0.9em;
+      text-decoration: none;
+      padding: 0.3em 0.7em;
+      border: 1px solid #000;
+      display: block;
+      margin-bottom: 0.6em;
+      border-radius: 15px;
+      &:hover {
+        color: #003366;
+        border: 1px solid #003366;
+      }
+    }
+  }
+}
+ul.tag-in-custom li {
+  display: block;
+  ul.tag-in li {
+    color: #000;
+    border-color: #000;
+    display: inline-block;
+  }
+}
+.warning_message {
+  color: #F00;
+  font-size: 15px;
+}
+
+
+.timeline-custom {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+
+.timeline-custom:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline-custom > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-custom > li:before,
+.timeline-custom > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline-custom > li:after {
+  clear: both;
+}
+
+.timeline-custom > li:before,
+.timeline-custom > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline-custom > li:after {
+  clear: both;
+}
+
+.timeline-custom > li > .timeline-custom-panel {
+  width: 100%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  -ms-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  -o-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.timeline-custom > li.timeline-custom-inverted > .timeline-custom-panel {
+  float: right;
+}
+
+.timeline-custom > li.timeline-custom-inverted > .timeline-custom-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline-custom > li.timeline-custom-inverted > .timeline-custom-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline-custom-badge.primary {
+  background-color: #2e6da4 !important;
+}
+
+.timeline-custom-badge.success {
+  background-color: #3f903f !important;
+}
+
+.timeline-custom-badge.warning {
+  background-color: #f0ad4e !important;
+}
+
+.timeline-custom-badge.danger {
+  background-color: #d9534f !important;
+}
+
+.timeline-custom-badge.info {
+  background-color: #5bc0de !important;
+}
+
+.timeline-custom-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.timeline-custom-body > p,
+.timeline-custom-body > ul {
+  margin-bottom: 0;
+}
+
+.timeline-custom-body > p + p {
+  margin-top: 5px;
+}
+
+ul.tag-in {
+  padding: 0px;
+  margin: 0px;
+  li {
+  display: inline-block;
+    a {
+      color: #000;
+      font-size: 0.9em;
+      text-decoration: none;
+      padding: 0.3em 0.7em;
+      border: 1px solid #000;
+      display: block;
+      margin-bottom: 0.6em;
+      border-radius: 15px;
+      &:hover {
+        color: #003366;
+        border: 1px solid #003366;
+      }
+    }
+  }
+}
+ul.tag-in-custom li {
+  display: block;
+  ul.tag-in li {
+    color: #000;
+    border-color: #000;
+    display: inline-block;
+  }
+}
+.warning_message {
+  color: #F00;
+  font-size: 15px;
+}
+
+
+.timeline-custom {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+
+.timeline-custom:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline-custom > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-custom > li:before,
+.timeline-custom > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline-custom > li:after {
+  clear: both;
+}
+
+.timeline-custom > li:before,
+.timeline-custom > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline-custom > li:after {
+  clear: both;
+}
+
+.timeline-custom > li > .timeline-custom-panel {
+  width: 100%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  -ms-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  -o-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.timeline-custom > li.timeline-custom-inverted > .timeline-custom-panel {
+  float: right;
+}
+
+.timeline-custom > li.timeline-custom-inverted > .timeline-custom-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline-custom > li.timeline-custom-inverted > .timeline-custom-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline-custom-badge.primary {
+  background-color: #2e6da4 !important;
+}
+
+.timeline-custom-badge.success {
+  background-color: #3f903f !important;
+}
+
+.timeline-custom-badge.warning {
+  background-color: #f0ad4e !important;
+}
+
+.timeline-custom-badge.danger {
+  background-color: #d9534f !important;
+}
+
+.timeline-custom-badge.info {
+  background-color: #5bc0de !important;
+}
+
+.timeline-custom-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.timeline-custom-body > p,
+.timeline-custom-body > ul {
+  margin-bottom: 0;
+}
+
+.timeline-custom-body > p + p {
+  margin-top: 5px;
+}

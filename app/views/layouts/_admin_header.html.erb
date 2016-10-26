@@ -1,0 +1,64 @@
+<header id="navigation" class = "navbar-fixed-top">
+  <div class = "container">
+    <div class = "navbar-header">
+      <button type="button" class = "navbar-toggle" data-toggle="collapse"
+        data-target=".navbar-collapse">
+        <span class = "sr-only"></span>
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+      </button>
+      <h1 class = "navbar-brand">
+        <%= link_to image_tag("logo.png"), admin_root_path %>
+      </h1>
+    </div>
+    <nav class = "collapse navigation navbar-collapse navbar-right"
+      role="navigation">
+      <ul id="nav" class = "nav navbar-nav">
+        <li>
+          <%= link_to admin_root_path do %>
+            <i class = "fa fa-home" aria-hidden="true"></i><%= t ".menu_home" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_courses_path do %>
+            <i class="fa fa-mortar-board" aria-hidden="true"></i>
+            <%= t ".menu_courses" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_subjects_path do %>
+            <i class = "fa fa-book" aria-hidden="true"></i>
+            <%= t ".menu_subjects" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_users_path do %>
+            <i class = "fa fa-users" aria-hidden="true"></i>
+            <%= t ".menu_users" %>
+          <% end %>
+        </li>
+        <li class="dropdown avatar-dropdown">
+          <%= image_tag current_user.avatar_url.url,
+            class: "img-circle avatar image-avatar-small",
+            data: {toggle: "dropdown"},
+            aria: {haspopup: "true", expanded: "true"} %>
+          <span class="nav-name"><%= current_user.name %></span>
+          <ul class="dropdown-menu dropdown-menu-custom">
+            <li>
+              <%= link_to t(".trainee_section"), root_path %>
+            </li>
+            <li>
+              <%= link_to t(".account_profile"), admin_user_path(current_user) %>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <%= link_to t(".account_logout"), destroy_user_session_path,
+                method: :delete %>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

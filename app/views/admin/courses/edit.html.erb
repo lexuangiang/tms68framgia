@@ -1,0 +1,15 @@
+<%= provide :title, t(".title") %>
+<% provide :title_header, t(".title_header") %>
+<% provide :submit_button, t(".update_button") %>
+<section id="service" class = "admin-section">
+  <div class="container">
+    <%= render "admin/shared/title_header" %>
+    <div class = "col-md-12 padding-0 margin-bottom-20">
+      <%= form_for [:admin, @course],
+        html: {class: "well well-custom form-horizontal"} do |f| %>
+        <%= f.hidden_field :status, value: @course.status %>
+        <%= render "form_course", f: f %>
+      <% end %>
+    </div>
+  </div>
+</section>

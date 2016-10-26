@@ -1,0 +1,11 @@
+<div class="tab-content">
+  <% if @course_finish.any? %>
+  <% @activities_task.each do |activity| %>
+  <li><%= render_activity activity %></li>
+  <% end %>
+  <% else %>
+  <ul class="timelines timeline-inverse">
+  <p class="text text-danger">You have not any activities</p>
+  </ul>
+  <% end %>
+</div>

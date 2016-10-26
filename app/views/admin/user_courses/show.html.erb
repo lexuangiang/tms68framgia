@@ -1,0 +1,57 @@
+<%= provide :title, t(".title") %>
+<%= provide :title_header, t(".title_header") %>
+<section id="service" class="admin-section">
+  <div class="container">
+    <div class="row">
+      <%= render "admin/shared/title_header" %>
+      <div class="col-md-12 padding-0 margin-bottom-20">
+        <div class="well well-lg">
+          <%= render "admin/courses/course_info" %>
+        </div>
+        <%= form_for [:admin, @course],
+          url: admin_course_user_courses_path(@course) do |f| %>
+          <div class="responsive-table">
+            <table id="table_list"
+              class="table table-striped table-bordered width-100" cellspacing="0">
+              <thead>
+                <tr>
+                  <th class="text-right" colspan="3">
+                    <%= f.submit t(".update_button"), class: "btn btn-info" %>
+                  </th>
+                </tr>
+                <tr>
+                  <th class="text-center"><%= t ".user_name" %></th>
+                  <th class="text-center"><%= t ".user_role" %></th>
+                  <th class="text-center"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <%= f.fields_for :user_courses do |builder| %>
+                  <% user = builder.object.user %>
+                  <tr>
+                    <td class="text-center"><%= user.name %></td>
+                    <td class="text-center">
+                      <span class="label label-outline label-<%= show_role user %>">
+                        <%= user.role %>
+                      </span>
+                    </td>
+                    <td class="text-center">
+                      <% if builder.object.persisted? %>
+                        <%= builder.check_box :_destroy, {checked: true}, 0, 1 %>
+                        <%= builder.hidden_field :id, value: builder.object.id %>
+                      <% else %>
+                        <%= builder.check_box :user_id, {checked: false},
+                          user.id, nil %>
+                      <% end %>
+                      <%= builder.hidden_field :is_active, value: @course.started? %>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
